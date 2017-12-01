@@ -28,6 +28,6 @@
 	</head>
 	<body>
 		<div class="izenburua">
-			<h1>Sharegram</h1>
-			<h2>Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h2>
+			<a href="index.php" class="titulua" ><h1>Sharegram</h1></a>
+			<h2 class="subtitulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h2>
 		</div>

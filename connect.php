@@ -1,8 +1,8 @@
 <?php
 	//LOCALHOST
-	$servername = "localhost:3306";
+	$servername = "localhost:8080";
 	$username = "root";
-	$password = "";
+	$password = "root";
 	$ddbb = "sharegram";
 	
 	//HOSTINGER
@@ -14,12 +14,12 @@
 	//$conn = new mysqli($serverH, $userH, $passH, $ddbbH); //HOSTINGER
 	
 	//Konexioa konprobatu
-	if ($conn->connect_error) {
+	//if ($conn->connect_error) {
 		$conn = new mysqli($servername, $username, $password, $ddbb); //LOCALHOST
 		if (!$conn) {
 			die("Ezin izan da konexioa ezarri: " . $conn->connect_error);
 		}
-	}
+	//}
 	
 	//Saioa hasi
 	if (session_status() == PHP_SESSION_NONE) {
