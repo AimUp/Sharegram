@@ -3,7 +3,7 @@
 	include "estruktura.php" 
 ?>
 		<div class="signin">
-			<form method="POST" id="login" action="">
+			<form method="POST" name="singUp" action="singUp.php">
 			Kontu berria sortu:<br>
 			Izena:					<input type="text" id="izena" name="izena"/><br>
 			Email-a:				<input type="text" id="email" name="email"/><br>
@@ -23,12 +23,10 @@
 					$pasahitza = $_POST['pasahitza'];
 					//BCRYPT
 					$hash = password_hash($pasahitza, PASSWORD_BCRYPT);
-					$irudia = addslashes(file_get_contents("../irudiak/UserIcon.png"));
-					date_default_timezone_set('	Europe/Madrid');
-   					$data = date('Y-m-d H:i:s');
+					//$irudia = addslashes(file_get_contents("../irudiak/UserIcon.png"));
 
 					if(baliostatuDatuak($erab, $izena, $email, $pasahitza)){
-						$query = "INSERT INTO erabiltzailea VALUES ('$erab, '$izena', '$email', '$hash', '', 0, '$irudia','$data');";
+						$query = "INSERT INTO erabiltzailea (`erabiltzailea`, `izena`, `email`, `pasahitza`) VALUES ('$erab', '$izena', '$email', '$hash');";
 
 						if($conn->query($query) === TRUE) {
 							echo "<h2>Datuak ondo sartu dira</h2> <br>";

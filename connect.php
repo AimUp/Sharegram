@@ -1,8 +1,8 @@
 <?php
 	//LOCALHOST
-	$servername = "localhost:8080";
+	$servername = "localhost:8081";
 	$username = "root";
-	$password = "root";
+	$password = "";
 	$ddbb = "sharegram";
 	
 	//HOSTINGER
