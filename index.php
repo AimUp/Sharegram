@@ -9,6 +9,7 @@
 			Pasahitza:		<input type="password" id="pasahitza" name="pasahitza"/><br>
 			<input type="submit" value="Log in"/>
 			</form>
+			
 			<?php 
 				if(isset($_POST['eposta'])){
 					include "connect.php";
