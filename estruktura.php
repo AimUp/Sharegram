@@ -25,9 +25,25 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="CSS/estiloa.css">
 	</head>
 	<body>
-		<div class="izenburua">
-			<a href="index.php" class="titulua" ><h1>Sharegram</h1></a>
-			<h2 class="subtitulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h2>
+		<div class="goiburua">
+			<div class="izenburua">
+				<a href="index.php" class="titulua" ><h1>Sharegram</h1></a>
+				<h2 class="subtitulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h2>
+			</div>
+			<div class="logInf">
+				<?php
+					if(!isset($_SESSION)) session_start(); 
+					if(isset($_SESSION['erabiltzailea'])){
+						echo "<a href='feed.php' class='link'>". $_SESSION['erabiltzailea'] ."</a></br>";
+						echo "<a href='logOut.php' class='link'>logOut</a>";
+					}
+					else{
+						echo "<a href='index.php' class='link'>LogIn</a></br>";
+						echo "<a href='signUp.php' class='link'>SignUp</a>";
+					}
+				?>
+			</div>
 		</div>

@@ -1,16 +1,18 @@
 <?php 
-	$title = "Sing Up";
+	$title = "Sign Up";
 	include "estruktura.php" 
 ?>
-		<div class="signin">
-			<form method="POST" name="singUp" action="singUp.php">
-			Kontu berria sortu:<br>
-			Izena:					<input type="text" id="izena" name="izena"/><br>
-			Email-a:				<input type="text" id="email" name="email"/><br>
-			Erabiltzailea:			<input type="text" id="erabiltzailea" name="erabiltzailea"/><br>
-			Pasahitza:				<input type="password" id="pasahitza" name="pasahitza"/><br>
-			Errepikatu pasahitza:	<input type="password" id="pasahitza" name="pasahitza"/><br>
-			<input type="submit" value="Log in"/>
+		<link rel="stylesheet" href="CSS/estiloSignUp.css">
+		<div class="signUp loga">
+			<form method="POST" name="signUp" action="signUp.php">
+				<label>Izena:</label>					<input type="text" id="izena" name="izena"/><br>
+				<label>Email-a:</label>					<input type="email" id="email" name="email"/><br>
+				<label>Erabiltzailea:</label>			<input type="text" id="erabiltzailea" name="erabiltzailea"/><br>
+				<label>Pasahitza:</label>				<input type="password" id="pasahitza" name="pasahitza"/><br>
+				<label>Errepikatu pasahitza:</label>	<input type="password" id="pasahitza" name="pasahitza"/><br>
+              	<div class="lowerS">
+              		<input type="submit" value="Bidali" class="signBotoia">
+              	</div>
 			</form>
 			<?php 
 				include "baliostapenak.php";

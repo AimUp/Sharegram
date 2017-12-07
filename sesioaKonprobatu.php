@@ -1,19 +1,9 @@
 <?php 
-
-	function eremuPribatua(){
-
+	function logAtala(){
+		session_start();
+		if(isset($_SESSION['erabiltzailea'])){
+			header("Location: feed.php");
+		}
 	}
-
-	function eremuPublikoa(){
-
-	}
-
-	function adminEremua(){
-
-	}
-
-	
-
-
 
 ?>

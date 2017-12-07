@@ -1,33 +1,33 @@
 <?php 
-	$title = "Sharegram";
-	include "estruktura.php" 
+	$title = "Feed";
+	include "estruktura.php";
 ?>
 	<body>
+		<div class="igo">
+			<form method="post">
+
+    			<input type="submit" name="argazkiIgo" id="argazkiIgo" value="Argazkia igo" />
+			</form>
+		</div>
 		<div class="feed">
 			<?php
-				for(i=1; /*i<=irudi kopurua karpetan*/; i++){
-					$irudia=./i;
-					//pisaria la anterior imagen o haria una tabla de imagenes en bertical??
-					echo "<tr>"
-					echo "<img src="$irudia"/>"
-					echo "</tr>"
+				include "connect.php";
+				$query = "SELECT I.irudia FROM ((erabiltzailea E INNER JOIN jarraitzen J ON E.erabiltzailea = J.jarraitzen) INNER JOIN irudia I ON I.jabea = J.jarraitzen) WHERE E.erabiltzailea = '".$_SESSION['erabiltzailea']."';";
+				$query = "SELECT I.irudia FROM ((erabiltzailea E INNER JOIN jarraitzen J ON E.erabiltzailea = J.jarraitzen) INNER JOIN irudia I ON I.jabea = J.jarraitzen) ;";
+				
+				$erantzuna = $conn->query($query);
+				if ($erantzuna){
+					if($erantzuna->num_rows > 0) {
+						while($lerroa = $erantzuna->fetch_assoc()) {
+							echo "<img src='data:image/png;base64,".base64_encode( $lerroa['irudia'] )."' style='width: 200px;' />";
+						}
+					}
 				}
-			?>
-		</div>
-			<form method="post">
-    			<input type="submit" name="igo" id="igo" value="Argazkia igo" />
-			</form>
-			<?php
-				function argazkiaIgo(){
-   					//argazkiak igotzeko lekua
-   					echo "<form method="post"/>";
-   					echo "<input type="submit" name="argazkiigo" id="argazkibotoia" value="Igo"/>";
-   					echo "<form/>";
+				else{
+					echo "<p class='mezua'>EZ DAGO ARGAZKIRIK ZURE FEED-ean</p>";
+					echo "<p class='mezua'>HASI ERABILTZAILEAK JARRAITZEN ARGAZKIAK IKUSTEKO</p>";
 				}
-
-				if(array_key_exists('igo',$_POST)){
-   					argazkiaIgo();
-				}
+				$conn->close();
 			?>
 		</div>
 	</body>
