@@ -10,12 +10,13 @@
 		<link rel="stylesheet" href="CSS/estiloSignUp.css">
 		<div class="signUp loga">
 			<p>Sortu kontu berria</p>
-			<form method="POST" name="signUp" action="signUp.php">
+			<script type="text/javascript" src="scriptak.js"/script>
+			<form method="POST" name="signUp" action="signUp.php" onSubmit="signUp(izena, email, erabiltzailea, pasahitza, pasahitza2)">
 				<input type="text" id="izena" class="inpName" name="izena" placeholder="Izena"/><br>
 				<input type="email" id="email" class="inpEmail" name="email" placeholder="Email-a"/><br>
 				<input type="text" id="erabiltzailea" class="inpUser" name="erabiltzailea" placeholder="Erabiltzailea"/><br>
 				<input type="password" id="pasahitza" class="inpPass" name="pasahitza" placeholder="Pasahitza"/><br>
-				<input type="password" id="pasahitza" class="inpPass" name="pasahitza" placeholder="Errepikatu pasahitza" /><br>
+				<input type="password" id="pasahitza2" class="inpPass" name="pasahitza2" placeholder="Errepikatu pasahitza" /><br>
               	<div class="lowerS">
               		<input type="submit" value="Bidali" class="logBotoia">
               	</div>

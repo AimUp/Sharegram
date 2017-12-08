@@ -10,8 +10,9 @@
 		<link rel="stylesheet" href="CSS/estiloLogIn.css">
 		
 		<div class="saioa loga animated">
+			<script type="text/javascript" src="scriptak.js"/script>
 			<p>Logeatu zaitez</p>
-			<form method="POST" name="logIn" id="login" class="login" action="index.php">
+			<form method="POST" name="logIn" id="login" class="login" action="index.php" onSubmit="logIn(erabiltzailea, pasahitza)">
 				<label>Erabiltzailea:</label>&emsp;
 				<input type="text" id="erabiltzailea" name="erabiltzailea"/></br>
 				<label>Pasahitza:</label>&emsp;&emsp;

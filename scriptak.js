@@ -9,3 +9,22 @@ function argazkiaIgo(path){
 	xhttp.send();
 	return false;
 }
+
+function logIn(erabiltzailea, pasahitza){
+	if(document.getElementById(erabiltzailea).value=="" || document.getElementById(pasahitza).value==""){
+		return false;
+	}else{
+		return true;
+	}
+}
+
+function signUp(izena, email, erabiltzailea, pasahitza, pasahitza2){
+	if(document.getElementById(izena).value=="" || document.getElementById(email).value=="" || document.getElementById(erabiltzailea).value=="" || document.getElementById(pasahitza).value=="" || document.getElementById(pasahitza2).value==""){
+		return false;
+	}else{
+		if(document.getElementById(pasahitza).value == document.getElementById(pasahitza2).value){
+			return true;
+		}
+	}
+}
+
