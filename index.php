@@ -1,21 +1,25 @@
+<!--HTML fitxategiaren estruktura nagusia beste fitxategi batetik inportatuko dugu-->
 <?php 
+	//Sesioa konprobatuko da beste php honetan, sesioa hasita badago ez gara logeatu beharko
 	include "sesioaKonprobatu.php";
 	logAtala();
 	$title = "Sharegram";
 	include "estruktura.php";
 ?>
-
+		<!--Fitxategi honetarako estiloa esleitu-->
 		<link rel="stylesheet" href="CSS/estiloLogIn.css">
+		
 		<div class="saioa loga animated">
+			<p>Logeatu zaitez</p>
 			<form method="POST" name="logIn" id="login" class="login" action="index.php">
 				<label>Erabiltzailea:</label>&emsp;
 				<input type="text" id="erabiltzailea" name="erabiltzailea"/></br>
 				<label>Pasahitza:</label>&emsp;&emsp;
 				<input type="password" id="pasahitza" name="pasahitza"/></br>
 				<div class="lowerL">
-               		&emsp;<input type="checkbox"><label class="check" for="checkbox">Logeatuta mantendu</label>
-                 	<input type="submit" value="Logeatu" class="logBotoia">
-           		</div>
+	           		&emsp;<input type="checkbox"><label class="check" for="checkbox">Logeatuta mantendu</label>
+	             	<input type="submit" value="Logeatu" class="loginBotoia logBotoia">
+	       		</div>
 			</form>
 			<?php 
 				if(isset($_POST['erabiltzailea'])){
@@ -41,5 +45,4 @@
 				}
 			?>
 		</div>
-	</body>
-</html>
+<?php include "footer.php" ?>

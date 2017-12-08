@@ -1,17 +1,23 @@
+<!--HTML fitxategiaren estruktura nagusia beste fitxategi batetik inportatuko dugu-->
 <?php 
+	//Sesioa konprobatuko da beste php honetan, sesioa hasita badago ez gara logeatu beharko
+	include "sesioaKonprobatu.php";
+	logAtala();
 	$title = "Sign Up";
 	include "estruktura.php" 
 ?>
+		<!--Fitxategi honetarako estiloa esleitu-->
 		<link rel="stylesheet" href="CSS/estiloSignUp.css">
 		<div class="signUp loga">
+			<p>Sortu kontu berria</p>
 			<form method="POST" name="signUp" action="signUp.php">
-				<label>Izena:</label>					<input type="text" id="izena" name="izena"/><br>
-				<label>Email-a:</label>					<input type="email" id="email" name="email"/><br>
-				<label>Erabiltzailea:</label>			<input type="text" id="erabiltzailea" name="erabiltzailea"/><br>
-				<label>Pasahitza:</label>				<input type="password" id="pasahitza" name="pasahitza"/><br>
-				<label>Errepikatu pasahitza:</label>	<input type="password" id="pasahitza" name="pasahitza"/><br>
+				<input type="text" id="izena" class="inpName" name="izena" placeholder="Izena"/><br>
+				<input type="email" id="email" class="inpEmail" name="email" placeholder="Email-a"/><br>
+				<input type="text" id="erabiltzailea" class="inpUser" name="erabiltzailea" placeholder="Erabiltzailea"/><br>
+				<input type="password" id="pasahitza" class="inpPass" name="pasahitza" placeholder="Pasahitza"/><br>
+				<input type="password" id="pasahitza" class="inpPass" name="pasahitza" placeholder="Errepikatu pasahitza" /><br>
               	<div class="lowerS">
-              		<input type="submit" value="Bidali" class="signBotoia">
+              		<input type="submit" value="Bidali" class="logBotoia">
               	</div>
 			</form>
 			<?php 
@@ -44,5 +50,4 @@
 				}
 			?>
 		</div>
-	</body>
-</html>
+<?php include "footer.php" ?>

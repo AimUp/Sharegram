@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+		<!--Titulua estrukturari pasatuko dio HTML fitxategi bakoitzak-->
 		<title><?php echo($title); ?></title>
+
+		<!--Metadata-->
 		<meta http-equiv="content-type" content="text/html" />
 		<meta charset="UTF-8">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<meta name="author" content="Hector Vadillo & Aimar Ugarte">
+
+		<!--Favicon-ak ezarri (nabigatzaileko irudia) tamaina bakoitza -->
 		<link rel="apple-touch-icon" sizes="57x57" href="./favicon.ico/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="./favicon.ico/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="./favicon.ico/apple-icon-72x72.png">
@@ -25,25 +30,34 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="CSS/estiloa.css">
+
+		<!--Estiloak pasatu-->
+		<link rel="stylesheet" href="CSS/estiloEstruktura.css">
+		<link rel="stylesheet" href="CSS/estiloLog.css">
+		<link rel="stylesheet" href="CSS/estiloArgazkiak.css">
 	</head>
 	<body>
+		<!--Goibururako div-a-->
 		<div class="goiburua">
+			<!--Izenburua-->
 			<div class="izenburua">
 				<a href="index.php" class="titulua" ><h1>Sharegram</h1></a>
-				<h2 class="subtitulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h2>
+				<h4 class="azpititulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h4>
 			</div>
+			<!--Sesioaren informazioa-->
 			<div class="logInf">
 				<?php
+					//Sesioa hasi eta konprobatu sesiorik dagoen, ez badago logeatzeko linkak jarri
 					if(!isset($_SESSION)) session_start(); 
 					if(isset($_SESSION['erabiltzailea'])){
 						echo "<a href='feed.php' class='link'>". $_SESSION['erabiltzailea'] ."</a></br>";
-						echo "<a href='logOut.php' class='link'>logOut</a>";
+						echo "<a href='logOut.php' class='link'>Log out</a>";
 					}
 					else{
-						echo "<a href='index.php' class='link'>LogIn</a></br>";
-						echo "<a href='signUp.php' class='link'>SignUp</a>";
+						echo "<a href='index.php' class='link'>Log in</a></br>";
+						echo "<a href='signUp.php' class='link'>Sign up</a>";
 					}
 				?>
 			</div>
 		</div>
+		<div class="edukia">

@@ -30,5 +30,4 @@
 				$conn->close();
 			?>
 		</div>
-	</body>
-</html>
+<?php include "footer.php" ?>
