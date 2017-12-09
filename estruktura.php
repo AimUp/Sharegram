@@ -35,6 +35,9 @@
 		<link rel="stylesheet" href="CSS/estiloEstruktura.css">
 		<link rel="stylesheet" href="CSS/estiloLog.css">
 		<link rel="stylesheet" href="CSS/estiloArgazkiak.css">
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./JAVASCRIPT/scriptak.js"/></script>
 	</head>
 	<body>
 		<!--Goibururako div-a-->
@@ -50,8 +53,14 @@
 					//Sesioa hasi eta konprobatu sesiorik dagoen, ez badago logeatzeko linkak jarri
 					if(!isset($_SESSION)) session_start(); 
 					if(isset($_SESSION['erabiltzailea'])){
-						echo "<a href='feed.php' class='link'>". $_SESSION['erabiltzailea'] ."</a></br>";
-						echo "<a href='logOut.php' class='link'>Log out</a>";
+						echo "	<div class='dropdown'>
+									<img src='data:Argazkia/jpeg;base64,".$_SESSION['irudia']."' ></img>
+									<div class='dropdown-content'>
+									    <a href='profila.php'>Profila</a>
+									    <a href='ezarpenak.php'>Ezarpenak</a>
+									    <a href='logOut.php' class='link'>Log out</a>
+									</div>
+								</div>";
 					}
 					else{
 						echo "<a href='index.php' class='link'>Log in</a></br>";

@@ -28,11 +28,15 @@ function signUp(izena, email, erabiltzailea, pasahitza, pasahitza2){
 	}
 }
 
-//JQuery funtzioa
 $(document).ready(function(){
+
 	$(window).scroll(function(){
-		if( $(this).scrollTop() > 15 ){
+		if( $(this).scrollTop() > 0 && $(this).scrollTop() < 15 ){
+
+		}
+		else if( $(this).scrollTop() > 15 ){
 			$('.goiburua').addClass('goiburua2');
+
 		} else {
 			$('.goiburua').removeClass('goiburua2');
 		}

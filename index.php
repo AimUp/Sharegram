@@ -10,14 +10,13 @@
 		<link rel="stylesheet" href="CSS/estiloLogIn.css">
 		
 		<div class="saioa loga animated">
-			<script type="text/javascript" src="scriptak.js"/script>
 			<p>Logeatu zaitez</p>
 			<form method="POST" name="logIn" id="login" class="login" action="index.php" onSubmit="logIn(erabiltzailea, pasahitza)">
 				<label>Erabiltzailea:</label>&emsp;
 				<input type="text" id="erabiltzailea" name="erabiltzailea"/></br>
 				<label>Pasahitza:</label>&emsp;&emsp;
 				<input type="password" id="pasahitza" name="pasahitza"/></br>
-				<div class="lowerL">
+				<div class="lower lowerL">
 	           		&emsp;<input type="checkbox"><label class="check" for="checkbox">Logeatuta mantendu</label>
 	             	<input type="submit" value="Logeatu" class="loginBotoia logBotoia">
 	       		</div>
@@ -27,7 +26,7 @@
 					include "connect.php";
 					$erabiltzailea = $_POST['erabiltzailea'];
 					$pasahitza = $_POST['pasahitza'];
-					$query = "SELECT pasahitza, admin FROM erabiltzailea WHERE erabiltzailea='$erabiltzailea'";
+					$query = "SELECT pasahitza, admin, irudia FROM erabiltzailea WHERE erabiltzailea='$erabiltzailea'";
 					$erantzuna = $conn->query($query);
 					if ($erantzuna->num_rows > 0) {
 						$lerroa = $erantzuna->fetch_assoc();
@@ -35,6 +34,7 @@
 					    if (password_verify($pasahitza, $lerroa["pasahitza"])) {
 					    	$_SESSION['erabiltzailea'] = $erabiltzailea;
 							$_SESSION['admin'] = $lerroa["pasahitza"];
+							$_SESSION['irudia'] = base64_encode( $lerroa['irudia'] );
 							header("Location: feed.php");
 						}
 						else{

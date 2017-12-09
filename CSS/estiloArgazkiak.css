@@ -1,4 +1,61 @@
-.igo{
+.mezua{
+	text-align: center;
+}
+
+.feedIgo{
     text-align: center;
-    margin-bottom: 75px;
+}
+
+.feedBotoiak{
+	
+	
+	margin-bottom: 100px;
+	display: block;
+	text-align: center;
+	margin-bottom: 75px;
+}
+
+.feedBotoia {
+	width: 130px;
+	outline: none;
+	border-radius: 5px;
+	padding: 15px 15px;
+	font-size: 15px;
+	color: #fff;
+	border: none;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.feedBotoia:active {
+	transform: translate(0px, 5px);
+	-webkit-transform: translate(0px, 5px);
+	box-shadow: 0px 1px 0px 0px;
+}
+
+.botoiaTop {
+	background-color: #55acee;
+	box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.botoiaTop:hover {
+	background-color: #6FC6FF;
+}
+
+.botoiaAzkenak {
+	background-color: #9b59b6;
+	box-shadow: 0px 5px 0px 0px #82409D;
+}
+
+.botoiaAzkenak:hover {
+	background-color: #B573D0;
+}
+
+.botoiaJarraitzen {
+	background-color: #e67e22;
+	box-shadow: 0px 5px 0px 0px #CD6509;
+}
+
+.botoiaJarraitzen:hover {
+	background-color: #FF983C;
 }
