@@ -2,7 +2,7 @@
 <?php 
 	//Sesioa konprobatuko da beste php honetan, sesioa hasita badago ez gara logeatu beharko
 	include "sesioaKonprobatu.php";
-	
+	erabiltzaileAtala();
 	$title = "Ezarpenak";
 	include "estruktura.php" 
 ?>

@@ -1,16 +1,12 @@
 <?php 
+	include "sesioaKonprobatu.php";
+	erabiltzaileAtala();
 	$title = "Feed";
 	include "estruktura.php";
 ?>
-	<!--Javascripta kargatu-->
-	<script type="text/javascript" src="./JAVASCRIPT/feedLoad.js"></script>
+		<!--jarraitzen funtzioari deituz irudiak kargatuko dira-->
+		<script type="text/javascript">jarraitzen();</script>
 
-	<body onload="jarraitzen();">
-		<!--<div class="feedIgo">
-			<form method="post">
-    			<input type="submit" name="argazkiIgo" id="argazkiIgo" value="Argazkia igo" />
-			</form>
-		</div>-->
 		<div class="feedBotoiak">
 			<button class="feedBotoia botoiaTop" onclick="topPost()">TOP</button>
 			<button class="feedBotoia botoiaAzkenak" onclick="azkenak()">AZKENAK</button>
