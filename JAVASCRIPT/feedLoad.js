@@ -64,3 +64,14 @@ function ezabatuIrudia(id){
 	xhttp.open("GET","ezabatuIrudia.php?id="+id);
 	xhttp.send();
 }
+
+function erabiltzaileInfo(nick){
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if ((xhttp.readyState==4)&&(xhttp.status==200)){
+			document.getElementById("erabiltzaileInfo").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET","erabiltzaileInfo.php?nick="+nick);
+	xhttp.send();
+}

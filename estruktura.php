@@ -42,6 +42,7 @@
 		<script type="text/javascript" src="./JAVASCRIPT/scriptak.js"/></script>
 		<script type="text/javascript" src="./JAVASCRIPT/feedLoad.js"></script>
 		<script type="text/javascript" src="./JAVASCRIPT/scriptCheck.js"></script>
+		<script type="text/javascript" src="./JAVASCRIPT/erabiltzaileak.js"></script>
 	</head>
 	<body>
 		<!--Goibururako div-a-->

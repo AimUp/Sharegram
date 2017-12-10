@@ -13,4 +13,15 @@
 		}
 	}
 
+	function erabProfila($nick){
+		session_start();
+		if(isset($_SESSION['erabiltzailea'])){
+			if(strcmp($_SESSION['erabiltzailea'],$nick) == 0){
+				header("Location: profila.php");
+			}
+		}
+		else{
+			header("Location: index.php");
+		}
+	}
 ?>
