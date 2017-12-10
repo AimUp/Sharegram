@@ -42,6 +42,17 @@ function nireak(){
 	xhttp.send();
 }
 
+function erabiltzaile(nick){
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if ((xhttp.readyState==4)&&(xhttp.status==200)){
+			document.getElementById("erabiltzaileIrudiak").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET","erabiltzaileIrudiak.php?nick="+nick);
+	xhttp.send();
+}
+
 function ezabatuIrudia(id){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function(){

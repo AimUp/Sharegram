@@ -1,0 +1,21 @@
+.erabTaula{
+	text-align: left;
+	margin-left: 25px;
+}
+
+.erabTaula .irudia{
+
+}
+
+.erabTaula .irudia img{
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.erabTaula .datuak{
+	text-align: left;
+}
+
+.parametroa {
+	font-weight: bold;
+}
