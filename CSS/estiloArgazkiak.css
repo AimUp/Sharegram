@@ -2,6 +2,71 @@
 	text-align: center;
 }
 
+.feed{
+	text-align: center;
+}
+
+.feed-img-div{
+	margin: 10px;
+	display: inline-block;
+	width: 200px;
+}
+
+.feed-img-div img{
+	width: 200px;
+}
+
+.feed-img-div .profil-link{
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+
+.feed-img-div .puntu-botoi{
+	display: inline-block;
+	width: 45%;
+	float: right;
+	padding-left: 5%;
+}
+
+.puntu-botoi i{
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    padding: 3px;
+}
+
+.puntu-botoi i:hover{
+	border: solid #616161;
+    border-width: 0 3px 3px 0;
+}
+
+.like-press{
+	border: solid #4CAF50;
+	border-width: 0 3px 3px 0;
+	transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.dislike-press{
+	border: solid #F44336;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+}
+
+.puntu-botoi .p{
+	border: solid #000;
+	border-width: 0 3px 3px 0;
+	transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.puntu-botoi .n{
+	border: solid #000;
+	border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+}
+
 .feedBotoiak{
 	margin-bottom: 100px;
 	display: block;

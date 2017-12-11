@@ -1,19 +1,29 @@
-function logIn(erabiltzailea, pasahitza){
-	if(document.getElementById(erabiltzailea).value=="" || document.getElementById(pasahitza).value==""){
+function logIn(erab, pass){
+	if(document.getElementById(erab).value=="" || document.getElementById(pass).value==""){
 		return false;
-	}else{
-		return true;
 	}
+	return true;
 }
 
-function signUp(izena, email, erabiltzailea, pasahitza, pasahitza2){
-	if(document.getElementById(izena).value=="" || document.getElementById(email).value=="" || document.getElementById(erabiltzailea).value=="" || document.getElementById(pasahitza).value=="" || document.getElementById(pasahitza2).value==""){
+function signUp(izena, email, erab, pass, pass2){
+	if(document.getElementById(izena).value=="" || document.getElementById(email).value=="" || document.getElementById(erab).value=="" || document.getElementById(pass).value=="" || document.getElementById(pass2).value==""){
 		return false;
-	}else{
-		if(document.getElementById(pasahitza).value == document.getElementById(pasahitza2).value){
-			return true;
-		}
+	}else if(document.getElementById(pass).value == document.getElementById(pass2).value){
+		return true;
 	}
+	return false;
+}
+
+function profilUpdate(id){
+	irudia = document.getElementById(id).files[0];
+	if(irudia!=null){
+		if(irudia.size > 999000){
+			document.getElementById("errorea").innerHTML = "<center class='errorea'>Argazkia handiegia da. 999KB baino txikiagoko argazki bat aukeratu, mesedez.</center><br>";
+			return false;
+		}
+	}	
+	return true;
+
 }
 
 function argazkiaDiva(id){

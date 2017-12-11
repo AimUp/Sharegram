@@ -31,27 +31,36 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-		<!--Estiloak pasatu-->
+		<!--Estiloak pasatu CSS-->
 		<link rel="stylesheet" href="CSS/estiloEstruktura.css">
 		<link rel="stylesheet" href="CSS/estiloLog.css">
+		<link rel="stylesheet" href="CSS/estiloLogIn.css">
+		<link rel="stylesheet" href="CSS/estiloSignUp.css">
 		<link rel="stylesheet" href="CSS/estiloArgazkiak.css">
 		<link rel="stylesheet" href="CSS/profilekoArgazkiak.css">
 		<link rel="stylesheet" href="CSS/erabiltzailea.css">
+		<link rel="stylesheet" href="CSS/argazkiaIgo.css">
 				
+		<!--JQuery liburutegia inportatu-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!--Javascript fitxategiak-->
 		<script type="text/javascript" src="./JAVASCRIPT/scriptak.js"/></script>
 		<script type="text/javascript" src="./JAVASCRIPT/feedLoad.js"></script>
 		<script type="text/javascript" src="./JAVASCRIPT/scriptCheck.js"></script>
 		<script type="text/javascript" src="./JAVASCRIPT/erabiltzaileak.js"></script>
 	</head>
 	<body>
+		
 		<!--Goibururako div-a-->
 		<div class="goiburua">
+
 			<!--Izenburua-->
 			<div class="izenburua">
 				<a href="index.php" class="titulua" ><h1>Sharegram</h1></a>
 				<h4 class="azpititulua">Ongi etorri Sharegramera, igo zure argazkiak eta besteenak ...</h4>
 			</div>
+
 			<!--Sesioaren informazioa-->
 			<div class="logInf">
 				<?php
@@ -74,4 +83,6 @@
 				?>
 			</div>
 		</div>
+
+		<!--Fitxategi bakoitzak izango duen eduki guztia div honen berruan joango da (footer.php-n itxi)-->
 		<div class="edukia">

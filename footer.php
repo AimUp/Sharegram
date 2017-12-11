@@ -1,3 +1,5 @@
+<!--Footerra sortzeko behar den HTML zatia-->
+
 		</div>
 		<div class="fixed-footer">
 	    	<div class="footer-eduki">

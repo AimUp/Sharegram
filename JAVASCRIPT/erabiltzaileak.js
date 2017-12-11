@@ -21,3 +21,17 @@ function unfollow(erab){
 	xhttp.open("GET","unfollow.php?nick="+erab);
 	xhttp.send();
 }
+
+function like(id){
+	if(document.getElementById(id+"n").className == 'dislike-press'){
+		document.getElementById(id+"n").className = 'n';
+	}
+	document.getElementById(id+"p").className = 'like-press';
+}
+
+function dislike(id){
+	if(document.getElementById(id+"p").className == 'like-press'){
+		document.getElementById(id+"p").className = 'p';
+	}
+	document.getElementById(id+"n").className = 'dislike-press';
+}

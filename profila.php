@@ -1,11 +1,10 @@
 <?php 
 	include "sesioaKonprobatu.php";
-	erabiltzaileAtala();
-	$title = "Sing Up";
-	include "estruktura.php";
+	erabiltzaileAtala();//Sesio bat hasita dagoela konprobatuko du, bestela login egitera bidaliko du
+	$title = "Profila";
+	include "estruktura.php";//HTML orriaren estruktura nagusia beste fitxategi batetik inportatuko dugu
 ?>
-	<link rel="stylesheet" href="CSS/argazkiaIgo.css">
-
+	<!--Argazkiak igotzeko forma edukiko duen div-a. Hasieran izkutua egongo da eta botoiari ematean javascript bidez ikusgarri jarriko da-->
 	<div class="feedIgo">
 		<button class="plus" onclick="argazkiaDiva('argazkiaForm');">+</button>
 
@@ -32,10 +31,12 @@
 		</form>
 	</div>
 
+	<!--AJAX-en errorerenbat egotekotan div honetan inprimatu egingo da-->
 	<div id="errorea"></div>
-	<!--jarraitzen funtzioari deituz irudiak kargatuko dira-->
+
+	<!--jarraitzen funtzioari deituz irudiak kargatuko dira nireIrudiak div-ean-->
 	<script type="text/javascript">nireak();</script>
-	<div id="nireIrudiak" class="nireIrudiak">
-		
-	</div>
+	<div id="nireIrudiak" class="nireIrudiak"></div>
+
+<!--Footerraren HTML zatia jarriko du-->
 <?php include "footer.php" ?>

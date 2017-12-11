@@ -1,14 +1,17 @@
 <?php
+	//Nick parametroa GET bezala pasatzen ez bazaio feed.php-ra joango da
+	//	if hau fitxategi honen amaieran bukatzen da
 	if(isset($_GET['nick'])){
 		$nick = $_GET['nick'];
 		include "sesioaKonprobatu.php";
-		erabProfila($nick);
+		erabProfila($nick);//Sesio bat hasita dagoela konprobatuko du, bestela login egitera bidaliko du, gainera erabiltzaile hau gure profila izatekotan gure profilera bidaliko gaitu
 		$title = $nick;
-		include "estruktura.php";
+		include "estruktura.php";//HTML orriaren estruktura nagusia beste fitxategi batetik inportatuko dugu
 ?>
 
 		<div id="erabiltzaileInfo" class="erabiltzaileInfo">
 			<?php
+				//Erabiltzailearen informazioa lortuko da datu basetik
 				include "connect.php";
 				$query = "SELECT E.erabiltzailea, E.izena, E.kokapena, E.irudia FROM erabiltzailea E WHERE E.erabiltzailea='".$nick."';";
 
@@ -68,13 +71,15 @@
 			?>
 		</div>
 
+		<!--AJAX-ean erroreren bat egotekotan div honetan inprimatuko da-->
 		<div id="errorea"></div>
 		
+		<!--AJAX erabiliz erabiltzailearen irudiak kargatuko ditugu erabiltzaileIrudiak div-ean-->
 		<script type='text/javascript'>erabiltzaile( <?php echo json_encode($nick)?> );</script>
-		<div id="erabiltzaileIrudiak" class="erabiltzaileIrudiak">
-		</div>
+		<div id="erabiltzaileIrudiak" class="erabiltzaileIrudiak"></div>
 
 <?php 
+		//Footerraren HTML zatia jarriko du
 		include "footer.php"; 
 	}
 	else{
