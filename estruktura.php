@@ -42,7 +42,7 @@
 		<link rel="stylesheet" href="CSS/argazkiaIgo.css">
 				
 		<!--JQuery liburutegia inportatu-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript"  src="./JAVASCRIPT/jquery-3.2.1.js"></script>
 
 		<!--Javascript fitxategiak-->
 		<script type="text/javascript" src="./JAVASCRIPT/scriptak.js"/></script>

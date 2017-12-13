@@ -41,6 +41,6 @@
 
 	<div id="errorea"></div>
 
-	<button>EZABATU PROFILA</button>
+	<button disabled>EZABATU PROFILA</button>
 
 <?php include "footer.php" ?>

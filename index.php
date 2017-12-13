@@ -13,7 +13,7 @@
 				<input type="password" id="pasahitza" name="pasahitza"/></br>
 				<div class="lower lowerL">
 	           		&emsp;<input type="checkbox"><label class="check" for="checkbox">Logeatuta mantendu</label>
-	             	<input type="submit" value="Logeatu" class="loginBotoia logBotoia">
+	             	<input type="submit" name="logeatu" value="Logeatu" class="loginBotoia logBotoia">
 	       		</div>
 			</form>
 		</div>

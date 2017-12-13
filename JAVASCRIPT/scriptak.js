@@ -23,7 +23,6 @@ function profilUpdate(id){
 		}
 	}	
 	return true;
-
 }
 
 function argazkiaDiva(id){
